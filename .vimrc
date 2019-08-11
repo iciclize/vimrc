@@ -8,8 +8,21 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " plugins here
+Plug 'scrooloose/nerdtree'
+Plug 'alvan/vim-closetag'
+Plug 'thinca/vim-quickrun'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 
 call plug#end()
+
+let g:closetag_filenames = '*.html,*.vue,*.js'
+let g_closetag_filetypes = 'html,vue,js'
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'onedark'
+set laststatus=2
 
 set fenc=utf-8
 set autoread
