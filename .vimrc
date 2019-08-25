@@ -13,7 +13,8 @@ Plug 'alvan/vim-closetag'
 Plug 'thinca/vim-quickrun'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'edkolev/tmuxline.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
@@ -23,6 +24,15 @@ let g_closetag_filetypes = 'html,vue,js'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'onedark'
 set laststatus=2
+
+let g:tmuxline_preset = {
+  \'a'    : '#S',
+  \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+  \'win'  : ['#I', '#W'],
+  \'cwin' : ['#I', '#W', '#F'],
+  \'x'    : '#(date)',
+  \'y'    : ['%R', '%a', '%Y'],
+  \'z'    : '#H'}
 
 set fenc=utf-8
 set autoread
