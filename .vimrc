@@ -39,6 +39,9 @@ let g:tmuxline_preset = {
 " taglist
 set tags = tags
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+if has("mac")
+  let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+endif
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 
