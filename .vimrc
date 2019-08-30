@@ -15,7 +15,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
+Plug 'vim-scripts/taglist.vim'
+Plug 'szw/vim-tags'
+ 
 call plug#end()
 
 let g:closetag_filenames = '*.html,*.vue,*.js'
@@ -33,6 +35,14 @@ let g:tmuxline_preset = {
   \'x'    : '#(date)',
   \'y'    : ['%R', '%a', '%Y'],
   \'z'    : '#H'}
+
+" taglist
+set tags = tags
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 set fenc=utf-8
 set autoread
