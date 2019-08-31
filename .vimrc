@@ -45,7 +45,11 @@ endif
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '${HOME}/.ycm_extra_conf.py'
+let g:ycm_auto_trigger = 1
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_autoclose_preview_window_after_insertion = 1
+set splitbelow
 
 set fenc=utf-8
 set autoread
